@@ -1,0 +1,48 @@
+///////////////////////////////////////
+//                                   //
+//   Tutoriel par Romaric Mollard    //
+//                                   //
+///////////////////////////////////////
+
+Installer ce qu’il faut sur eclipse :
+1. sur eclipse, allez dans help->Install new software
+2. faire “add” http://download.eclipse.org/technology/m2e/releases
+3. quand tout est chargé, faites next et finish et installez… (ça peut prendre longtemps…)
+5. lancer le téléchargement du dossier suivant : https://github.com/youtube/api-samples (c'est le bouton vert "download zip folder")
+
+Ajouter le projet d’exemples youtube
+6. Faire Files->Import->Existing Maven Projects
+7. Dans le root directory renseigner le_dossier_telechargé_sur_github/java/
+8. Faire “finish"
+9. L’importation peut prendre du temps, si vous avez mis les chargements en arrières plan ouvrez les pour voir que l’importation n’est pas terminée
+/!\ Si vous regardez dans le projet que vous venez d'importer (normalement nommé "samples"), vous verrez qu'il est bizarre, ne touchez à rien tant que le chargement visible en bas à droite de la fenetre n'est pas terminé !
+
+/!\ Si vous avez une erreur :
+Alors c’est un peu chiant… Allez dans window->preferences->maven->user settings, il y a un bouton nommé reindex et à gauche un path
+Il faut supprimer de votre ordi le path .m2/ puis vider la corbeille
+Si l’ordi vous dit que c’est en cours d'utilisation, forcez la fin des processus de nom "java"
+Puis réouvrez eclipse et réessayez (ça va retélécharger doucement...)
+
+Créer le projet Google API :
+9. Je suppose que vous avez un compte google, rendez-vous sur https://console.developers.google.com
+10. en haut à gauche, vous pouvez cliquer sur un truc à côté de “Google API” une liste déroulante s’ouvre, faire “Créer un projet”. (Si vous avez déjà fait un projet pour la CW rendez vous sur le projet correspondant), sinon renseignez le nom du projet (moi j’ai mis CodingWeek), il faudra attendre un peu que le projet se créé, puis il faut s’y rendre en allant sur la liste déroulante de tout à l’heure, ou bien attendre que ça redirige automatiquement.
+
+Obtenir les clefs :
+11. Aller dans bibliothèque (sur la console google api)
+12. Chercher Youtube Data API v3
+13. En haut vous trouverez le bouton “Activer”
+14. Rendez vous ensuite dans “Identifiants”
+15. Faire nouveau et “Aidez moi à choisir”
+16. Renseigner : "Api Youtube Data”, sur une autre plateforme avec interface utilisateur, et avec accès utilisateur avec son consentement
+17. Faire plusieurs fois suivant, et c’est bon !
+18. Faire encore créer identifiants mais cette fois ci faire “Clef API (simple pour vérifier le quotas)"
+
+Mettre tout ça en place et tester ;)
+19. Dans eclipse, allez dans votre projet "samples" puis dans le package src/main/resources
+20. dans client_secrets.json ajoutez la première clef créée (celle avec le secret) (de la forme 10743266170-bfjqk8E21ndk2913mnv3c.apps.googleusercontent.com et h1JHzBubP183NFNsj93EdjhKoOq)
+21. Dans youtube.properties ajoutez la seconde clef créée (de la forme AIzaSFHf213fdu4YuYILVNkDFJA92ZM_3bh4fw6PyM)
+
+Ensuite pour tester aller dans le package qui fini par cmdline.data
+et lancer Search.java !
+
+Voilà ! Bon courage !

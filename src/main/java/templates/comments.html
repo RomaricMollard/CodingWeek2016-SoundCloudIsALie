@@ -1,0 +1,84 @@
+<div class="general_info">
+<div class="scroller1" data-simplebar-direction="vertical">
+
+	<img class="general_info_image" src="" />
+
+	<div class="general_info_contener">
+		
+		<sv class="video_title"></sv>
+		<sv class="video_channelTitle"></sv>
+		
+		<div class="general_info_descr">
+			<sv class="video_descr"></sv>
+		</div>
+		
+	</div>
+	
+</div>
+</div>
+
+<div class="comments_scroll">
+<div class="scroller2" data-simplebar-direction="vertical">
+
+	<div id="new_comment" style="display: none;" class="new_comment comment_msg_contener">
+	
+		<div class="comment_user_img" style="background-image: url('{{channel_thumbnailurl}}');"></div>
+	
+		<div class="comment_msg">
+			<div class="comment_tick"></div>
+		
+			<div class="text comment_text" id="comment_text">
+					<textarea id="newCommentTextArea" placeholder="Ajouter un commentaire" onclick="commentsOpenSubResponse();"></textarea>
+			</div>
+		
+			<div class="button_post buttonh" onclick="CommentsViewBridge.addComment($('#newCommentTextArea').val());$('#newCommentTextArea').val('');">Ajouter</div>
+		
+		</div>
+	</div>
+
+	<div id="comments_list" class="commentslist">
+	</div>
+	
+	<div class="comments loading">
+		<div class="loading_img"></div><br>
+		Chargement des commentaires...
+	</div>
+
+</div></div>
+
+<script type="text/javascript">
+$('.scroller1').simplebar();
+$('.scroller2').simplebar();
+setInterval(function(){
+	$('.scroller1').simplebar('recalculate');
+	$('.scroller2').simplebar('recalculate');
+},1000);
+
+
+function commentViewChangeImage(url){
+	$('.general_info_image').attr("src",url);
+}
+
+function commentsOpenSubResponse(id){
+
+	$('.comment_response').hide();
+	$('.comment_response_opener_button').show();
+	
+	if(id!=undefined){
+		$('#subresponse'+id).show();
+		$('#comment_response_opener_button'+id).hide();
+	}
+}
+
+function openEditComment(id){
+	$('.modification_contener').hide();
+	$('.edits_buttons_comments').show();
+	$('.comment_text').show();
+	
+	if(id!=undefined){
+		$('#modification_contener'+id).show();
+		$('#modification_button'+id).hide();
+		$('#comment_text'+id).hide();
+	}
+}
+</script>

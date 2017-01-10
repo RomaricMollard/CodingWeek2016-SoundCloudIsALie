@@ -1,0 +1,8 @@
+<div class="list_element videoDownloadId{{video_id}}">
+<div class="img" style="background-image: url('{{video_thumbnail}}');">
+<div class="remove" onclick="StreamViewBridge.stopDownload('{{video_id}}');event.preventDefault();event.stopPropagation();"><img class="icon" src="imgs/icons/delete.png" /></div>
+<div class="text" style="margin-left: 60px;width:170px;"><sv class="list_download_status_text"></sv>% - {{video_title}}</div>
+<div style="position: relative; width: 230px;">
+<div class="list_download_status" style="width:{{downloadstate}}%"></div>
+</div>
+</div>

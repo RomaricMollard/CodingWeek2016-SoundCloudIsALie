@@ -1,0 +1,82 @@
+<div class="history_tab">
+	<img id="historytab_button" class="icon" src="imgs/icons/history.png" onclick="openHistoryTab()" />
+	<img id="upnexttab_button" class="icon active" src="imgs/icons/next.png" onclick="openUpNextTab()"  />
+	<img id="downloadtab_button" class="icon active" src="imgs/icons/download.png" onclick="openDownloadTab()"  />
+	<img id="uploadtab_button" class="icon active" src="imgs/icons/upload.png" onclick="openUploadTab()"  />
+</div>
+
+<div class="historytab">
+	<div id="historyContener" class="stream_list">
+
+	</div>
+</div>
+<div class="upnexttab">
+	<div id="upNext" class="stream_list">
+
+	</div>
+
+</div>
+<div class="downloadtab">
+	<div id="downloadList" class="download_list">
+
+	</div>
+
+</div>
+
+<div class="uploadtab">
+	<div id="uploadList" class="upload_list">
+
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	function openHistoryTab(){
+		$("#downloadtab_button").removeClass("active");
+		$("#uploadtab_button").removeClass("active");
+		$("#historytab_button").addClass("active");
+		$("#upnexttab_button").removeClass("active");
+		$(".upnexttab").hide();
+		$(".uploadtab").hide();
+		$(".historytab").show();
+		$(".downloadtab").hide();
+	}
+	function openUpNextTab(){
+		$("#downloadtab_button").removeClass("active");
+		$("#uploadtab_button").removeClass("active");
+		$("#historytab_button").removeClass("active");
+		$("#upnexttab_button").addClass("active");
+		$(".upnexttab").show();
+		$(".uploadtab").hide();
+		$(".historytab").hide();
+		$(".downloadtab").hide();
+	}
+	function openDownloadTab(){
+		$("#downloadtab_button").addClass("active");
+		$("#uploadtab_button").removeClass("active");
+		$("#historytab_button").removeClass("active");
+		$("#upnexttab_button").removeClass("active");
+		$(".downloadtab").show();
+		$(".uploadtab").hide();
+		$(".upnexttab").hide();
+		$(".historytab").hide();
+	}
+	function openUploadTab(){
+		$("#downloadtab_button").removeClass("active");
+		$("#uploadtab_button").addClass("active");
+		$("#historytab_button").removeClass("active");
+		$("#upnexttab_button").removeClass("active");
+		$(".downloadtab").hide();
+		$(".uploadtab").show();
+		$(".upnexttab").hide();
+		$(".historytab").hide();
+	}
+
+	openHistoryTab();
+</script>
+<script type="text/javascript">
+$('.historytoscroll').simplebar();
+setInterval(function(){
+	$('.historytoscroll').simplebar('recalculate');
+},1000);
+</script>

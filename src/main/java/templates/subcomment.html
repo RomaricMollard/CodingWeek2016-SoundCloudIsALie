@@ -1,0 +1,29 @@
+<div class="comment subcomment" id="comment{{comment_id}}">
+	<div class="comment_user_img" style="background-image: url('{{user_image}}');"></div>
+	
+	<div class="comment_msg_contener">
+	<div class="comment_msg">
+		<div class="comment_tick"></div>
+	
+		<div class="pseudo">{{author}}</div>
+		<div class="text comment_text" id="comment_text{{comment_id}}">{{comment}}</div>
+		
+		<div class="modification_contener" id="modification_contener{{comment_id}}"> 
+			<textarea id="editCommentTextArea{{comment_id}}">{{comment}}</textarea>
+			<div class="edits_buttons_comments">
+				<div class="modify buttonh" onclick="CommentsViewBridge.editComment($('#editCommentTextArea{{comment_id}}').val(), '{{comment_id}}');openEditComment();">Modifier</div>
+				<div class="delete buttonh" onclick="$('#editCommentTextArea{{comment_id}}').val($('#comment_text{{comment_id}}').html());openEditComment();">Annuler</div>
+			</div>
+		</div>
+		
+		<div style="margin-top: 40px;width: 100%;display: {{can_modify}}"></div>
+				
+		<div class="edits_buttons_comments" id="modification_button{{comment_id}}">
+			<div class="modify buttonh" onclick="openEditComment({{comment_id}});" style="display: {{can_modify}}">Modifier</div>
+			<div class="delete buttonh" onclick="CommentsViewBridge.deleteComment('{{comment_id}}')" style="display: {{can_modify}}">Supprimer</div>
+		</div>
+	
+	</div>
+	</div>
+
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="styles/general.css">
+<link rel="stylesheet" type="text/css" href="styles/start.css">
+<script src="js/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<div class="startBlock">
+	<div class="startBlock_inner">
+		<div class="startText">Bienvenue</div>
+		<div class="appTitle">#SoundCloudIsALie</div>
+		<div class="startButton" onclick="$('.startBlock_inner').removeClass('opened');setTimeout(function(){MainContentBridge.login();},1000)">Se connecter</div>
+	</div>
+	</div>
+
+</body>
+
+<script type="text/javascript">
+	setTimeout(function(){
+		$('.startBlock_inner').addClass('opened');
+	}, 100);
+</script>
+
+</html>

@@ -1,0 +1,51 @@
+<div class="comment" id="comment{{comment_id}}">
+	<div class="comment_user_img" style="background-image: url('{{user_image}}');"></div>
+	
+	<div class="comment_msg_contener">
+	<div class="comment_msg">
+		<div class="comment_tick"></div>
+	
+		<div class="pseudo">{{author}}</div>
+		<div class="text comment_text" id="comment_text{{comment_id}}">{{comment}}</div>
+		
+		<div class="modification_contener" id="modification_contener{{comment_id}}"> 
+			<textarea id="editCommentTextArea{{comment_id}}">{{comment}}</textarea>
+			<div class="edits_buttons_comments">
+				<div class="modify buttonh" onclick="CommentsViewBridge.editComment($('#editCommentTextArea{{comment_id}}').val(), '{{comment_id}}');openEditComment();">Modifier</div>
+				<div class="cancel buttonh" onclick="$('#editCommentTextArea{{comment_id}}').val($('#comment_text{{comment_id}}').html());openEditComment();">Annuler</div>
+			</div>
+		</div>
+		
+		<div style="margin-top: 40px;width: 100%;"></div>
+				
+		<div class="edits_buttons_comments" id="modification_button{{comment_id}}">
+			<div class="modify buttonh" onclick="openEditComment({{comment_id}});" style="display: {{can_modify}}">Modifier</div>
+			<div class="delete buttonh" onclick="CommentsViewBridge.deleteComment('{{comment_id}}')" style="display: {{can_modify}}">Supprimer</div>
+		</div>
+	
+		<div id="comment_response_opener_button{{comment_id}}" class="comment_response_opener_button buttonh" onclick="commentsOpenSubResponse({{comment_id}})">
+			<div class="responseopener">Répondre</div>
+		</div>
+
+	</div>
+	</div>
+	
+
+</div>
+<div id="commentid{{comment_id}}"></div>
+
+<div class="new_comment comment comment_response subcomment" id="subresponse{{comment_id}}">
+	<div class="comment_user_img" style="background-image: url('{{channel_thumbnailurl}}');"></div>
+	
+	<div class="comment_msg_contener">
+	<div class="comment_msg">
+		<div class="comment_tick"></div>
+	
+		<textarea id="newCommentTextArea{{comment_id}}" placeholder="Ajouter une réponse"></textarea>
+		
+		<div class="button_post" onclick="CommentsViewBridge.addSubComment($('#newCommentTextArea{{comment_id}}').val(), '{{comment_id}}');$('#newCommentTextArea{{comment_id}}').val('');">Répondre</div>
+
+	</div>
+	</div>
+
+</div>

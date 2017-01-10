@@ -1,0 +1,6 @@
+<div class="list_element">
+	<div class="remove" onclick="StreamViewBridge.removeUpload('{{video_id}}');event.preventDefault();event.stopPropagation();"><img class="icon" src="imgs/icons/delete.png" /></div>
+	<div class="text" style="margin-left: 60px;width:170px;">{{upload_state}}% - {{video_title}}</div>
+	<div style="position: relative; width: 230px;"></div>
+	<div class="list_download_status" style="width:{{upload_state}}%"></div>
+</div>

@@ -1,0 +1,102 @@
+#progressbar_background
+{
+	background-color: black;
+	height: 30px;
+	width: 80%;
+	margin: auto;
+	margin-top: 10px;
+}
+
+#progressbar
+{
+	background-color: green;
+	height: 30px;
+	width: 0%;
+}
+
+.upload_zone #title, .upload_zone #tags, .upload_zone #description {
+	background-color: rgb(50, 50, 50);
+	color: white;
+	border-radius: 3px;
+	padding: 2px;
+	font-size: 16px;
+	border: none;
+	-webkit-appearance:none;
+	outline: none;
+	height: 30px;
+	display: block;
+	width: 80%;
+	margin: auto;
+	left: 20%;
+}
+
+.upload_zone #description
+{
+	height: 80px;
+	resize: none;
+}
+
+.upload_zone #status, .upload_zone #status option
+{
+	background-color: rgb(50, 50, 50);
+	color: white;
+	border-radius: 3px;
+	padding: 2px;
+	font-size: 16px;
+	border: none;
+	-webkit-appearance:none;
+	outline: none;
+	height: 30px;
+	display: block;
+	width: 80%;
+	margin: auto;
+	left: 20%;
+}
+
+.upload_zone .upload_button, .upload_zone .select_file_button {
+	transition: all 0.5s;
+	background-color: rgb(100, 100, 100);
+	border:none;
+	height: 34px;
+	-webkit-appearance:none;
+	outline: none;
+	border-left: 2px solid #111;
+	border-radius: 3px;
+	color: white;
+	width: 200px;
+	display: block;
+	position: relative;
+	margin: 0;
+}
+
+.upload_zone .select_file_button {
+	left: 10%;
+}
+
+.upload_zone .upload_button {
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+.upload_zone .upload_button:hover {
+	transition: all 0s;
+	background-color: rgb(200, 200, 200);
+	color: black;
+}
+.upload_zone .upload_button:active {
+	transition: all 0s;
+	background: #61AFE9;
+	color: #FFF;
+}
+
+.upload_zone label{
+	display: block;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.upload_zone #error_message{
+	text-align: center;
+	height: 16px;
+}

@@ -1,0 +1,17 @@
+<div class="search_zone" >
+	<input id="searchinput" class="search_input" type="text" onkeypress="if(event.keyCode === 13){$('#search_button').click();}"/>
+	<button class="search_button" id="search_button" onclick="SearchViewBridge.doResearch($('#searchinput').val());">Rechercher</button>
+</div>
+
+<div id="search_contener" class="video_result_parent">
+
+</div>
+
+<div class="showMore hideNoResult" onclick="SearchViewBridge.nextPage();" style="display: none;">Afficher plus de résultats</div>
+
+<center>
+<div class="search loading" style="display: none;width: 50%;margin:0px">
+	<div class="loading_img"></div><br>
+	Chargement des vidéos...
+</div>
+</center>

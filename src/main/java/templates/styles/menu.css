@@ -1,0 +1,54 @@
+#user_information
+{
+	text-align: left;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	font-size: 14px;
+	box-sizing: border-box;
+	background: rgb(70, 70, 70);
+}
+.menu_username {
+	width: 90px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+ 	white-space: nowrap;
+ 	display: inline-block;
+ 	font-size: 12px;
+}
+
+#user_information .user_img
+{
+	box-sizing: border-box;
+	width: 50px;
+	border-radius: 30px;
+	left: 10px;
+	height: auto;
+	vertical-align: middle;
+}
+
+.logout {
+	width: 20px;
+	top: 17px;
+	right: 10px;
+	position: absolute;
+}
+
+#menu_buttons_list .menu_button
+{
+	box-sizing: border-box;
+	cursor: pointer;
+	text-align: left;
+	width: 100%;
+	font-size: 13px;
+	padding-left: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#menu_buttons_list .menu_button:hover
+{
+	width: 100%;
+	background: black;
+}

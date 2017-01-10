@@ -1,0 +1,23 @@
+<div class="pageTitle">Uploader une vidéo</div>
+
+<div class="upload_zone" >
+	<div id="error_message"></div>
+
+	<label for="title">Titre de la vidéo</label><input type="text" id="title" /><br/>
+	<label for="description">Description</label><textarea id="description"></textarea><br/>
+	<label for="tags">Tags (séparés par des virgules)</label><input type="text" id="tags" /><br/>
+	
+	<label for="status">Statut</label>
+	<select id="status" name="status">
+		<option value="public" selected>public</option>
+		<option value="private">privé</option>
+		<option value="unlisted">non listé</option>
+	</select>
+	<br/>
+
+	<label for="select_file_button">Fichier vidéo à envoyer</label>	
+	<button class="select_file_button" id="select_file_button" onclick="UploadViewBridge.selectFile();">Selectionner un fichier</button><br/><br/>
+	<button class="upload_button" id="upload_button" onclick="UploadViewBridge.doUpload($('#title').val(), $('#description').val(), $('#tags').val(), $('#status').val());">Mettre en ligne</button>
+</div>
+
+<!-- <div id="progressbar_background"><div id="progressbar"></div></div> -->
